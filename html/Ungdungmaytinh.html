@@ -12,27 +12,27 @@
             let a = parseFloat(document.getElementById('nhap1').value),
                 b = parseFloat(document.getElementById('nhap2').value);
             let x = a + b;
-            document.getElementById('box').innerHTML.fixed('x');
+            document.getElementById('box').innerText = x;
         }
         function pheptru() {
             let a = parseFloat(document.getElementById('nhap1').value),
                 b = parseFloat(document.getElementById('nhap2').value);
             let x = a - b;
-            alert("Kết quả:"+x);
+            document.getElementById('box').innerText = x;
         }
 
         function phepnhan() {
             let a = parseFloat(document.getElementById('nhap1').value),
                 b = parseFloat(document.getElementById('nhap2').value);
             let x = a * b;
-            alert("Kết quả:"+x);
+            document.getElementById('box').innerText = x;
         }
 
         function phepchia() {
             let a = parseFloat(document.getElementById('nhap1').value),
                 b = parseFloat(document.getElementById('nhap2').value);
             let x = a / b;
-            alert("Kết quả:"+x);
+            document.getElementById('box').innerText = x;
         }
     </script>
 
@@ -43,7 +43,7 @@
         <tr>
             <td><input type="text" id="nhap1"></td>
             <td><input type="text" id="nhap2"></td>
-            <td> = <input type="text" id="box"></td>
+            <td id="box" style="width: 50px"> = </td>
         </tr>
         <tr>
             <td><input type="button" value="Addition(+)" onclick="phepcong()">

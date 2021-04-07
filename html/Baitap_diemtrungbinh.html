@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function ketqua_mod(){
+            let x = parseFloat(document.getElementById("phys").value);
+            let y = parseFloat(document.getElementById("chem").value);
+            let z = parseFloat(document.getElementById("math").value);
+            p = (x + y + z)/3;
+            q = x + y + z;
+
+            let a = document.getElementById('display1');
+            let a1 = a.value;
+
+            let result1 = eval(p);
+            a.value = result1;
+
+            let b = document.getElementById('display2');
+            let b1 = b.value;
+
+            let result2 = eval(q);
+            b.value = result2;
+        }
+
+    </script>
+
+
+</head>
+<body>
+        <form>
+            <input type="number" id="phys"/> Điểm Vật lý
+            <input type="number" id="chem"/> Điểm Hóa học
+            <input type="number" id="math"/> Điểm Toán học
+            <br>
+            <br>
+
+            Điểm trung bình 3 môn:<input type="text" id="display1"/>
+            <input type="button" value="Kết quả" onclick="ketqua_mod()"/> <input type="reset"/>
+            <br>
+            <br>
+            Tổng điểm 3 môn: <input type="text" id="display2"/>
+        </form>
+
+
+</body>
+</html>
