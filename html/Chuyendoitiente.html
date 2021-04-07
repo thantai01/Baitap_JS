@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            background-color:yellow;
+
+        }
+        th {color: whitesmoke;
+            border-color: whitesmoke;
+
+        background-color: lawngreen
+        }
+        td tr {width: 200px;
+            border-color: whitesmoke;
+
+        }
+        tr { text-align: center}
+
+    </style>
+
+    <script>
+
+        function luachon1(){
+            let e = document.getElementById("fcurrency");
+            let e1 = e.options[e.selectedIndex].text;
+            document.getElementById("gt1").innerHTML = e1;
+        }
+
+       function hienthi() {
+          let a = parseFloat(document.getElementById('in').value);
+           let fc = document.getElementById('fcurrency');
+           let fc_str = fc.options[fc.selectedIndex].value;
+           let tc = document.getElementById('tcurrency');
+           let tc_str = tc.options[tc.selectedIndex].value;
+           x = a * tc_str / fc_str;
+           document.getElementById('result').innerHTML= x;
+
+       }
+
+    </script>
+
+</head>
+<body>
+    <h1> Tool chuyển đổi tiền tệ </h1>
+<table border="1">
+    <tr>
+        <th>Amout</th>
+        <th width="200px">From Currency</th>
+        <th width="200px">To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="in"></td>
+
+        <td><select id="fcurrency" onchange="luachon1();">
+            <option>----</option>
+            <option value="1" name="USD">USD</option>
+            <option value="23000" name="Vietnamdong">VND</option>
+            <option value="6.5" name="China tệ">CNY</option>
+            <option value="1128" name="Yên Nhật">JPY</option>
+            <option value="110" name=" Won Hàn xẻng">KRW</option>
+            <option value="0.85" name="Ơ rô">EUR</option>
+            <option value="0.72" name=" Bảng Anh">GBP</option>
+        </select>
+        </td>
+        <td><select id="tcurrency" onchange="luachon2();">
+            <option>----</option>
+            <option value="1" name="Đô Biden">USD</option>
+            <option value="23000" name="Vietnamdong">VND</option>
+            <option value="6.5" name="China tệ">CNY</option>
+            <option value="1128" name="Yên Nhật">JPY</option>
+            <option value="110" name=" Won Hàn xẻng">KRW</option>
+            <option value="0.85" name="Ơ rô">EUR</option>
+            <option value="0.72" name=" Bảng Anh">GBP</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Convert" onclick="hienthi()"></td>
+        <td><h2 id="gt1"></h2></td>
+        <td><h2 id="gt2"></h2></td>
+    </tr>
+</table><hr>
+    <br>
+
+    <h2>Kết quả:</h2> <h2 id="result"></h2> <hr>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function show(){
+            let e = document.getElementById("ddlViewBy");
+            let strUser = e.options[e.selectedIndex].text;
+            alert(strUser);
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <select id="ddlViewBy" onchange="show();">
+        <option value="1">test1</option>
+        <option value="2">test2</option>
+        <option value="3">test3</option>
+    </select>
+</form>
+</body>
+</html>
