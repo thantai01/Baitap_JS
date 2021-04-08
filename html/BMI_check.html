@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI calculator</title>
+    <style>
+        table {border-color: whitesmoke;
+            border-collapse: collapse;
+
+        }
+        th {
+            text-align: center;
+            border-color:white;
+            background-color: lightgray;
+        }
+        td {
+            background-color: whitesmoke;
+            border-color: white;
+
+        }
+        tr {border-color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <table border="1" style="width: 50%; height: 500px;">
+        <tr>
+            <th colspan="2">Interpretation</th>
+            <th> Your BMI is</th>
+            <th id="rsl" width="100px"></th>
+        </tr>
+        <tr>
+            <td colspan="3" id="gry">Underweight</td>
+        </tr>
+        <tr>
+            <td colspan="3" id ="grn">Normal</td>
+        </tr>
+        <tr>
+            <td colspan="3" id="ylw">Overweight</td>
+        </tr>
+        <tr>
+            <td colspan="3" id="vrd">Obese</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
+<script>
+    let input_w = +(prompt("Cân nặng của bạn?"));
+    let input_h = +(prompt("Chiều cao của bạn?"));
+    bmi = input_w / ( input_h ** 2 );
+    alert('BMI của bạn là: '+ bmi);
+
+    document.getElementById("rsl").innerHTML = Math.floor(bmi);
+
+    if( bmi < 18.0 ) {
+        document.getElementById("gry").style.backgroundColor = 'gray';
+    } else if( bmi< 25.0) {
+        document.getElementById("grn").style.backgroundColor = 'green';
+    } else if( bmi <30.0) {
+        document.getElementById("ylw").style.backgroundColor = 'yellow';
+    } else {
+        document.getElementById("vrd").style.backgroundColor = 'red';
+    }
+</script>
