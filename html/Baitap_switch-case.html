@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Month check</title>
+</head>
+<body>
+    <div style="float: left">
+        <h1>Nhập tháng</h1>
+        Tháng <input type="text" id="input" style="width: 30px" />
+        <input type="button" value="Tính số ngày của  tháng" onclick="test()"/>
+        <p></p>
+        <input type="text" id="rsl" style="width: 100px" disabled/> days.
+    </div>
+
+</body>
+<script>
+    function test(){
+        let valueInput = document.getElementById('input').value;
+        let x = "31";
+        let y = "28 hoặc 29";
+        let z = "30";
+        switch(valueInput) {
+            case '2':
+                document.getElementById('rsl').value = y;
+                break;
+            case '1':
+            case '3':
+            case '':
+            case '5':
+            case '7':
+            case '9':
+            case '11':
+                document.getElementById('rsl').value = x;
+                break;
+            default:
+                document.getElementById('rsl').value = z;
+                break;
+        }
+    }
+
+</script>
+</html>
