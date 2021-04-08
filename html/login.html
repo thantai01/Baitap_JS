@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+
+    <script>
+        let a = prompt("Enter your ID");
+
+        if(a === 'Admin') {
+            let b = prompt("Enter your Password");
+                if (b === "Master") {
+                    alert("Welcome my Master!");
+                } else {
+                    if(b===" ") {
+                        alert("Canceled");
+                    } else {
+                        alert("Wrong Password");
+                    }
+                }
+        }else {
+            if (a === " ") {
+                alert("Canceled");
+            } else {
+                alert(" You're not my master");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
