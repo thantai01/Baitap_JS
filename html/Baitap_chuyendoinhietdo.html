@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+
+    <script>
+        function convert() {
+            let a = parseFloat(document.getElementById('dauvao').value);
+            let A = document.getElementById('menu1');
+            let A_v = A.options[A.selectedIndex].value;
+            alert(A_v)
+             x = a * c_c / b_c;
+            alert(x);
+
+
+            // let z = document.getElementById("display");
+            // let z1 = z.value;
+            //
+            // let result = val(x);
+            // z1 = result;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>CHUYỂN ĐỔI NHIỆT ĐỘ</h1>
+    <table>
+        <tr>
+            <th>Nhập số: </th>
+            <th> Độ </th>
+            <th></th>
+            <th> Độ </th>
+        </tr>
+        <tr>
+            <td><input type="number" id="dauvao"> </td>
+            <td>
+                <select id="menu1" onchange="chon1();">
+                    <option>---</option>
+                    <option value="1"> Độ C</option>
+                    <option value="34"> Độ F</option>
+                </select>
+            </td>
+            <td> ----- </td>
+            <td>
+                <select id="menu2" onchange="chon2();">
+                    <option>---</option>
+                    <option value="1"> Độ C</option>
+                    <option value="34"> Độ F</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Chuyển đổi" onclick="convert()"/></td>
+            <td><input type="text" id="display"/></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+
