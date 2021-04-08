@@ -5,13 +5,27 @@
     <title>Chuyển đổi nhiệt độ</title>
 
     <script>
-        function convert() {
-            let a = parseFloat(document.getElementById('dauvao').value);
+        // function chon1() {
+        //     let a = document.getElementById("menu1");
+        //     let a_str = a.options[a.selectedIndex].value;
+        //     alert(a_str);
+        // }
+
+
+
+
+            function convert() {
+            let a = document.getElementById('dauvao').value;
+
             let A = document.getElementById('menu1');
-            let A_v = A.options[A.selectedIndex].value;
-            alert(A_v)
-             x = a * c_c / b_c;
-            alert(x);
+            let A_v =A.options[A.selectedIndex].value;
+
+            let B = document.getElementById('menu2');
+            let B_v =B.options[B.selectedIndex].value;
+
+
+            let z = a * B_v / A_v;
+            alert(z)
 
 
             // let z = document.getElementById("display");
@@ -35,18 +49,18 @@
         <tr>
             <td><input type="number" id="dauvao"> </td>
             <td>
-                <select id="menu1" onchange="chon1();">
+                <select id="menu1" onchange="slect_1();">
                     <option>---</option>
-                    <option value="1"> Độ C</option>
-                    <option value="34"> Độ F</option>
+                    <option name="" value="1"> Độ C</option>
+                    <option name="" value="34"> Độ F</option>
                 </select>
             </td>
             <td> ----- </td>
             <td>
-                <select id="menu2" onchange="chon2();">
+                <select id="menu2" onchange=" chon2();">
                     <option>---</option>
-                    <option value="1"> Độ C</option>
-                    <option value="34"> Độ F</option>
+                    <option name="" value="1"> Độ C</option>
+                    <option name="" value="34"> Độ F</option>
                 </select>
             </td>
         </tr>
