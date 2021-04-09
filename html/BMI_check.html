@@ -2,57 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BMI calculator</title>
-    <style>
-        table {border-color: whitesmoke;
-            border-collapse: collapse;
-
-        }
-        th {
-            text-align: center;
-            border-color:white;
-            background-color: lightgray;
-        }
-        td {
-            background-color: whitesmoke;
-            border-color: white;
-
-        }
-        tr {border-color: white;
-        }
-    </style>
+    <title>BMI's</title>
+    <link rel="stylesheet" href="../CSS/BMI_check.css">
 
 </head>
 <body>
+    <div id="l_side">
+    <h1 style="text-align: center"> Your BMI'pts </h1>
 
-    <table border="1" style="width: 50%; height: 500px;">
+    <table id="tb_1">
         <tr>
             <th colspan="2">Interpretation</th>
             <th> Your BMI is</th>
             <th id="rsl" width="100px"></th>
         </tr>
         <tr>
-            <td colspan="3" id="gry">Underweight</td>
+            <td colspan="4" id="gry">Underweight</td>
         </tr>
         <tr>
-            <td colspan="3" id ="grn">Normal</td>
+            <td colspan="4" id ="grn">Normal</td>
         </tr>
         <tr>
-            <td colspan="3" id="ylw">Overweight</td>
+            <td colspan="4" id="ylw">Overweight</td>
         </tr>
         <tr>
-            <td colspan="3" id="vrd">Obese</td>
+            <td colspan="4" id="vrd">Obese</td>
         </tr>
     </table>
+        <h2 style="text-align: center"><b>WHAT IS YOUR BMI??</b></h2>
+        <br>
+        <img src="https://login.medlatec.vn//ImagePath/images/20200705/20200705_chi-so-bmi-3.jpg" alt="bmimeanning" width="100%" height="30%">
 
-
+    </div>
+    <div id="m_side">
+        <h1> Wanna fix your problem?!<br>See our suggestion below :)</h1>
+        <br>
+        <ul>
+            <li><a href="https://www.google.com/search?q=Overweight+problems&sxsrf=ALeKk019mJu2JoSo-1js5QQWsggYhAk2eQ%3A1617895761263&ei=USFvYPvWD87X-QaWloPYDQ&oq=diet+for+overweight&gs_lcp=Cgdnd3Mtd2l6EAEYAzIHCCMQsAMQJzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQsAMQQ1AAWABg42VoAXACeACAAXuIAXuSAQMwLjGYAQCqAQdnd3Mtd2l6yAEKwAEB&sclient=gws-wiz" target="_blank">Overweight Problem</a> </li>
+            <li><a href="https://www.google.com/search?q=diet+for+overweight&sxsrf=ALeKk00VhMuvHxaHbmobwjFyUMD8RhURFg%3A1617895723618&ei=KyFvYKesJcT7wAPP1KagCw&oq=diet+for+over&gs_lcp=Cgdnd3Mtd2l6EAMYAzIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywE6BggjECcQEzoECCMQJzoICAAQsQMQgwE6BAgAEEM6BQgAELEDOgoIABCxAxCDARBDOgcIABCxAxBDOgIIADoJCCMQ6gIQJxATOgcIIxDqAhAnOggILhCxAxCDAToICAAQxwEQowI6BAguEAM6CwgAELEDEMcBEK8BOgIILlDlXliQkwFgvqMBaBZwAngKgAHFAYgB2hSSAQQyNy4zmAEAoAEBqgEHZ3dzLXdperABCsABAQ&sclient=gws-wiz">Diet for Overweight</a></li>
+            <li><a href="https://www.google.com/search?q=Healthy+diet&sxsrf=ALeKk019mJu2JoSo-1js5QQWsggYhAk2eQ%3A1617895761263&ei=USFvYPvWD87X-QaWloPYDQ&oq=diet+for+overweight&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQsAMQQ1AAWABgs8IeaANwAngAgAFViAFVkgEBMZgBAKoBB2d3cy13aXrIAQnAAQE&sclient=gws-wiz" target="_blank">Healthy Diet</a> </li>
+            <li><a href="https://www.google.com/search?q=lose+weight+exercise&sxsrf=ALeKk03jNjqXbAi0oEQ-4piGIEd18O6xRw%3A1617896377743&ei=uSNvYNbwLNj_wAOEj4zoAw&oq=lose+weight+&gs_lcp=Cgdnd3Mtd2l6EAMYCDICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BwgAEEcQsAM6BAgjECc6BwgjEOoCECc6CQgjEOoCECcQEzoGCCMQJxATOggIABCxAxCDAToICC4QsQMQgwE6BQgAELEDOgQIABBDOgQILhADOgsIABCxAxDHARCvAToCCC46CwgAELEDEMcBEKMCOgQIABADOgUILhCxAzoICAAQxwEQowI6CAguELEDEJMCUN6RBVjK4QVgoZkGaA1wAngEgAF8iAHyEJIBBDIzLjKYAQCgAQGqAQdnd3Mtd2l6sAEKyAEIwAEB&sclient=gws-wiz" target="_blank">Losing weight Exercise</a></li>
+            <li><a href="https://www.google.com/search?q=Workout+plan+at+home+for+weight+loss&sxsrf=ALeKk01Jkj64I_w5cbZvh6-idFpRnGrbDQ%3A1617896480016&ei=ICRvYN1By-fBA4n2rKAG&oq=lose+weight+exercise&gs_lcp=Cgdnd3Mtd2l6EAEYATIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQsAMQQzIHCAAQsAMQQ1AAWABgjZcDaAVwAngAgAFqiAFqkgEDMC4xmAEAqgEHZ3dzLXdpesgBCsABAQ&sclient=gws-wiz" target="_blank">Workout plan at home for lose your weight</a></li>
+            <li><a href="https://www.google.com/search?q=Strength+training+for+Fat+Loss+PDF&sxsrf=ALeKk00Km_eT8GIF54yULineWhgBCxgf1g%3A1617896532999&ei=VCRvYLS6PI37wAP8v7yoDQ&oq=Workout+plan+at+home+for+weight+loss&gs_lcp=Cgdnd3Mtd2l6EAEYBDIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwA1AAWABg5f0HaAJwAngAgAFOiAFOkgEBMZgBAKoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz" target="_blank">Strength training for fat loss</a></li>
+            <li><a href="https://www.google.com/search?q=lose+weight+motivation&sxsrf=ALeKk01YqX1siudb9RHxkPIQdg9fQ467Fg%3A1617896664748&ei=2CRvYPecLdrM-Qb19CY&oq=lose+weight+moti&gs_lcp=Cgdnd3Mtd2l6EAMYADICCAAyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywEyBQgAEMsBMgUIABDLATIFCAAQywE6BAgjECc6CAgAELEDEIMBOgUILhCxAzoCCC46DggAELEDEIMBEMcBEKMCOgYIIxAnEBM6BAgAEEM6CAguELEDEIMBOgUIABCxAzoLCAAQsQMQxwEQowI6CQgjEOoCECcQEzoHCCMQ6gIQJzoECAAQA1CorQtYxOsLYMWQDGgCcAJ4AIABxgGIAZcOkgEDOC45mAEAoAEBqgEHZ3dzLXdperABCsABAQ&sclient=gws-wiz" target="_blank">Motivation Planning</a></li>
+        </ul>
+        <h2>Some kind of book that you maybe looking for</h2>
+        <br>
+        <img src="https://m.media-amazon.com/images/I/41e3DSJ0aXL.jpg" width="25%" height="50%">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61w0yz5cdFL.jpg" width="25%" height="50%">
+        <img src="https://m.media-amazon.com/images/I/51wtJGCtm0L.jpg" width="25%" height="50%">
+        <img src="https://images.penguinrandomhouse.com/cover/9781465489913" width="25%" height="45%">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71IRFtYOUnL.jpg" width="25%" height="45%">
+        <img src="https://images-production.bookshop.org/spree/images/attachments/7300862/original/9781947937130.jpg?1587814936" width="25%" height="45%"
+    </div>
+    <div id="r_side">
+        <h1></h1>
+    </div>
 </body>
 </html>
 <script>
-    let input_w = +(prompt("Cân nặng của bạn?"));
-    let input_h = +(prompt("Chiều cao của bạn?"));
+    let input_w = +(prompt("Your Weight??"));
+    let input_h = +(prompt("YOur Height??"));
     bmi = input_w / ( input_h ** 2 );
-    alert('BMI của bạn là: '+ bmi);
+    alert('Your BMI is: '+ bmi);
 
     document.getElementById("rsl").innerHTML = Math.floor(bmi);
 
@@ -65,4 +77,6 @@
     } else {
         document.getElementById("vrd").style.backgroundColor = 'red';
     }
+
+
 </script>

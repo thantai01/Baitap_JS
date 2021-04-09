@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <h1></h1>
+    <input type="button" value="Get your luck" id="btn">
+    <input type="text" value="" id="show" disabled style="width: 300px">
+
+
+
+</body>
+    <script>
+        document.getElementById('btn').addEventListener('click', dsp_rd);
+        function dsp_rd() {
+            document.getElementById('show').value = Math.floor(Math.random()*(100-1)+1);
+        }
+
+        document.getElementById('btn').addEventListener('click', dsp_t);
+        function dsp_t() {
+            document.getElementById('show').value = Date();
+        }
+
+
+
+
+
+
+    </script>
+
+
+</html>
