@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img id="obj" src="https://cdn4.iconfinder.com/data/icons/animals-177/512/Cat-512.png" style="width: 10%" height="10%"/>
+    <p>Let make a cat move</p>
+    <input id="btn1" type="button" value="Left"/>
+    <input id="btn2" type="button" value="Right"/>
+    <input id="btn3" type="button" value="Up"/>
+    <input id="btn4" type="button" value="Down"/>
+
+</body>
+
+<script>
+    let imgObj = null;
+    document.getElementById('obj');
+    function init() {
+        imgObj = document.getElementById('obj');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function move_right() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+
+    function move_left() {
+        imgObj.style.right = parseInt(imgObj.style.right) +10 +'px';
+    }
+    window.onload = init;
+    document.getElementById('btn2').addEventListener('click',move_right);
+    document.getElementById('btn1').addEventListener('click',move_left);
+
+
+</script>
+</html>

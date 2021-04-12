@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>In giá trị</h2>
+    <span id="result1"></span>
+
+    <h2>Tính tổng </h2>
+    Nhập n <input id="input1" value="" style="width: 30px">
+    Tổng các giá trị từ 1 --> n <input id="output1" value="" disabled>
+    <input type="button" value="Kết quả" onclick="totalresult()"/>
+
+    <h2> Bảng cửu chương </h2>
+    <span id="result2"></span>
+
+    <h2> In thẻ hr </h2>
+    <p id="result3"></p>
+</body>
+
+    <script>
+    let i = "";
+    for (i = 0; i < 5; i = i+1) {
+        document.getElementById("result1").innerHTML+= "The number is " + i + "<br>";
+    }
+    </script>
+
+    <script>
+        function totalresult() {
+        let n = document.getElementById("input1").value;
+        let total = 0;
+        let i = 1
+        for (; i <= n; i = i +1) {
+            total = total +i;
+            document.getElementById("output1").value = total;
+        }
+        }
+    </script>
+
+    <script>
+        let box ="";
+        box = "<table border='1' cellpadding='2' style='border-collapse: collapse' >";
+        for (i = 1; i <= 10; i = i + 1 ) {
+            box = box + "<tr>";
+            for (j =1; j <= 10; j = j + 1) {
+                box = box + "<td style='text-align: center' width='50px' height='50px'>" + i + 'x' + j + '=' + i*j + "</td>";
+            }
+            box = box + "</tr>";
+        }
+        box = box + "</table>";
+        document.getElementById("result2").innerHTML = box;
+
+    </script>
+
+    <script>
+
+
+
+
+
+    </script>
+
+
+</html>

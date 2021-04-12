@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+
+<script>
+    let i,j,box;
+    box = "<table border='1'style='border-collapse: collapse'>";
+    for (i = 1; i <= 8; i = i + 1 ) {
+        box += "<tr>"
+        for(j=1;j<=8; j=j+1) {
+            let total= i + j;
+            if (total%2===0) {
+                box += '<td height="100px" width="100px" bgcolor="white"></td>';
+            } else {
+                box += '<td height="100px" width="100px" bgcolor="black"></td>';
+            }
+        }
+       box += "</tr>";
+    }
+    box = box + "</table>"
+
+    document.getElementById("result").innerHTML = box;
+
+</script>
+</html>

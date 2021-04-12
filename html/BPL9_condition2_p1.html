@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../JS/Condition2_BPL9_part1.js"></script>
+</head>
+<body>
+    <div>
+        <form>
+        <h2>Tính diện tích hình vuông</h2> <br>
+        Giá trị cạnh a = <input type="number" id="input1" /> <input type="button" value="Diện tích =" onclick="answer1()"><input type="text" id="output1" value="" disabled> <input type="reset" value="AC"/>
+        </form><hr>
+    </div>
+    <div>
+        <form>
+        <h2>Tính diện tích</h2> <br>
+        <select id="slb1" onchange="">
+            <option value="2">Diện tích hình chữ nhật</option>
+            <option value="3">Diện tích hình tam giác vuông (biết 2 cạnh góc vuông) </option>
+        </select>
+        <br><br>
+        Cạnh a = <input type="number" id="input2"/>
+        Cạnh b = <input type="number" id="input3"/>
+        <input  type="button" value="Kết quả=" onclick="answer2()"> <input type="text" id="output2" value="" disabled/> <input type="reset" value="AC"/>
+        </form><hr>
+    </div>
+    <div>
+        <form>
+        <h2> Giải phương trình ax2 + bx +c = 0 </h2>
+        Giá trị a = <input type="number" id="input4" style="width: 30px"/> Giá trị b = <input type="number" id="input5" style="width: 30px"/> Giá trị c = <input type="number" id="input6" style="width: 30px"><br>
+        <br><input type="button" value="Giải phương trình" onclick="answer3()"/> <input type="reset" value="AC"/> <br><br>
+        Số nghiệm của ptrình <input type="text" id="out1" value="" disabled/><br><br>
+        X<sub>1</sub> = <input type="text" id="output3" value="" disabled/> <br>
+        X<sub>2</sub> = <input type="text" id="output4" value="" disabled/>
+        </form>
+    </div><hr>
+    <div>
+        <form>
+        <h2> Giải phương trình ax + b = 0</h2>
+        a = <input type="text" value="" id="input7" style="width: 30px"/> b = <input type="text" value="" id="input8" style="width: 30px"/> <input type="button" value="Giải phương trình" onclick="answer4()"> <input type="reset" value="AC"/><br><br>
+        Phương trình có <input type="text" value="" id="check1" disabled style="width:10px" height="2px"> 1 nghiệm x= <input type="text" value="" id="output5" disabled/>
+        <p style="margin-left: 105px"> <input type="text" value="" id="check2" disabled style="width:10px" height="2px"> Vô số nghiệm</p>
+        <p style="margin-left: 105px"> <input type="text" value="" id="check3" disabled style="width:10px" height="2px"> Vô nghiệm </p>
+        <br>
+        <hr>
+        </form>
+    </div>
+    <div> ????
+        <h2>Age-checking</h2>
+        Mời nhập số tuổi <input type="text" value="" id="input9" style="width: 50px"><br><br>
+        <input type="button" value="Check" style="width: 150px" onclick="answer5()"> <input type="text" id="out3" disabled/>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h2> Kiểm tra các cạnh của tam giác</h2>
+        <form>
+            a = <input type="text" value="" id="input10" style="width: 30px"> b = <input type="text" value="" id="input11" style="width: 30px"> c = <input type="text" value="" id="input12" style="width: 30px">
+            <input type="reset" value="AC"/> <br><br>
+            <input type="button" value="Check" onclick="answer6()"> <input type="checkbox" id="checkbox1" disabled/> Là cạnh của 1 tam giác <input type="checkbox" id="checkbox2" disabled/> Không là cạnh của 1 tam giác
+        </form>
+    </div>
+    <hr>
+    <br>
+    <div>
+
+
+    </div>
+</body>
+</html>

@@ -6,22 +6,31 @@
 </head>
 <body>
     <h1></h1>
-    <input type="button" value="Get your luck" id="btn">
-    <input type="text" value="" id="show" disabled style="width: 300px">
-
+    <input type="button" value="Get your luck" id="btn1"/>
+    <input type="text" value="" id="show1" disabled style="width: 300px"/><br>
+    <input type="button" value="Get time" id="btn2"/>
+    <input type="text" value="" id="show2" disabled style="width: 300px">
+    <P id="ex1">This paragraph will change when you move your mouse in</P>
 
 
 </body>
     <script>
-        document.getElementById('btn').addEventListener('click', dsp_rd);
+        document.getElementById('btn1').addEventListener('click', dsp_rd);
         function dsp_rd() {
-            document.getElementById('show').value = Math.floor(Math.random()*(100-1)+1);
+            document.getElementById('show1').value = Math.floor(Math.random()*(100-1)+1);
         }
 
-        document.getElementById('btn').addEventListener('click', dsp_t);
+        document.getElementById('btn2').addEventListener('click', dsp_t);
         function dsp_t() {
-            document.getElementById('show').value = Date();
+            document.getElementById('show2').value = Date();
         }
+        document.getElementById('ex1').addEventListener('mouseover',ch_c);
+        document.getElementById('ex1').addEventListener('mouseout', ch_r);
+        function ch_c() {
+            document.getElementById('ex1').innerHTML = "You see that????";
+        }
+
+
 
 
 

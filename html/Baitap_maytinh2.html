@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+    <style>
+        table {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: bisque;
+
+        }
+        table td {
+            width: 20px;
+            height: 20px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+    <script src="../JS/Baitap_maytinhcoban.js"></script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"> <input type="text" disabled style="width:280px" id="show"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" id="btn7" onclick="set('7')"/></td>
+            <td><input type="button" value="8" id="btn8" onclick="set('8')"/></td>
+            <td><input type="button" value="9" id="btn9" onclick="set('9')"/></td>
+            <td><input type="button" value="+" id="add" onclick="set('+')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" id="btn4" onclick="set('4')"/></td>
+            <td><input type="button" value="5" id="btn5" onclick="set('5')"/></td>
+            <td><input type="button" value="6" id="btn6" onclick="set('6')"/></td>
+            <td><input type="button" value="-" id="sub" onclick="set('-')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" id="btn1" onclick="set('1')"/></td>
+            <td><input type="button" value="2" id="btn2" onclick="set('2')"/></td>
+            <td><input type="button" value="3" id="btn3" onclick="set('3')"/></td>
+            <td><input type="button" value="x" id="multi" onclick="set('*')"/></td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="C" id="btnC" onclick="C()"/></td>
+            <td><input type="button" value="." id="btnDot" onclick="set('.')"/></td>
+            <td><input type="button" value="=" id="btnEqual" onclick="answer()"/></td>
+            <td><input type="button" value="/" id="btnDiv" onclick="set('/')"/></td>
+        </tr>
+    </table>
+</body>
+
+</html>
