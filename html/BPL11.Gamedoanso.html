@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME: ĐOÁN SỐ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #top {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #start_btn {
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #reset_btn {
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="top">
+        <form>
+            <input type="button" value="Bắt đầu" id="start_btn" onclick="begin()">
+            <input type="reset" value="Chơi lại" id="reset_btn">
+        </form>
+    </div>
+</body>
+
+
+<script>
+    function begin() {
+        a = +prompt("Nhập số nhỏ nhất?");
+        b = +prompt("Nhập số lớn nhất nhất?");
+        range = Math.ceil(Math.random()*((a-b)+b));
+        alert("Có phải số bạn muốn đoán trong khoảng từ " + a + " đến " + b + " không?!");
+        turn = +prompt("Số lần bạn muốn đoán??")
+            for (let i = 1; i <= turn; i++) {
+                c = +prompt(" Nhập số đoán của bạn");
+                if (c === range) {
+                    alert("Congrat!!You win!");
+                    break;
+                } else if (c > range || c < range) {
+                    alert("Oops!!Not exactly...");
+                    alert("Try again?");
+                }
+            }
+        }
+</script>
+</html>

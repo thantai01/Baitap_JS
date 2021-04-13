@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function displayFibonacci(quantity) {
+        let a = 0;
+        let b = 1;
+        let c = a + b;
+        let i = 2;
+        document.write("Dãy số Fibonacci: " + a + " " + b + " ");
+        while (i < quantity) {
+            c = a + b;
+            i++;
+            document.write(c + " ");
+            a = b;
+            b = c;
+        // if (c%5===0)
+        //     document.write("Số đầu tiên trong dãy chia hết cho 5:" + c)
+        }
+    }
+        quantity = prompt("Insert quantity: ");
+        displayFibonacci(quantity);
+
+
+</script>
+</html>

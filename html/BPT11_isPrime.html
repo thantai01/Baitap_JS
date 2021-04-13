@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function isPrime(num) {
+       if (num <2)
+           return false;
+       for ( let i=2;i<num; i = i +1) {
+           if (num%i===0)
+               return false
+       }
+       return true;
+    }
+    function displayPrime(quantity) {
+        let count = 0;
+        let num =1;
+        let result = 0;
+        document.write("Dãy số nguyên tố từ số nhỏ nhất: <br>");
+        while (count<quantity) {
+            if(isPrime(num)) {
+                count++;
+                document.write(num + "-");
+                result = result + num;
+            }
+            num = num + 1;
+        }
+        document.write("<br>"+ "Tổng các số =" + result)
+    }
+    quantity = +prompt("Number of display");
+    displayPrime(quantity);
+
+</script>
+
+
+
+</html>

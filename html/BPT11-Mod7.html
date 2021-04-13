@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isMod7(num) {
+        for (let i = 0; i < num; i++) {
+        if (num % 7 === 0)
+            return true
+        }
+        return false
+    }
+    function displayMod7(quantity) {
+        let i = 0;
+        let num = 0;
+        let result = 0;
+        document.write("Dãy các số chia hết cho 7:")
+        while (i<quantity) {
+            if(isMod7(num)) {
+                i++;
+                document.write(num+"-");
+                result = result + num;
+            }
+            num = num +1;
+        }
+        document.write("<br> + Tổng các số chia hết cho 7 = "+result);
+    }
+    quantity=prompt("Number of quantity??");
+    displayMod7(quantity);
+</script>
+
+</body>
+</html>

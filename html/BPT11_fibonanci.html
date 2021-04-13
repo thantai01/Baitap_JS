@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIbo</title>
+</head>
+<body>
+    <h2>FiboNum Check</h2>
+    <input type="text" id="input1" disabled/>
+    <input type="button" value="Check" onclick="displayFibonacci()" disabled/>
+    <br>
+    Kết quả <input type="text" value="" id="output1" disabled/>
+    <br>
+
+
+</body>
+<script>
+    function isFibonacci(num) {
+
+            if (num>=0&&num<=3) return true;
+            let a = 0;
+            let b = 1;
+            let c = a+b;
+            while(c<=num)
+            {
+                if(c === num) return true;
+                a = b;
+                b = c;
+                c = a + b;
+            }
+            return false;
+    }
+    number = +prompt("Insert: ");
+    if(isFibonacci(number))
+        document.getElementById("output1").value = number+" là số fibonacci";
+    else
+        document.getElementById("output1").value = number+" không là số fibonacci";
+
+</script>
+<script>
+    function displayFibonacci(quantity) {
+        let a =0;
+        let b = 1;
+        let c = a + b;
+        let i = 2;
+        let result = 0;
+        document.write("Dãy số Fibonacci: " + a + " " + b + " ");
+        while (i <quantity) {
+            c = a + b;
+            i++;
+            document.write(c + " ")
+            result = result + c;
+            a = b;
+            b = c;
+        }
+        document.write("<br> Tổng các số trong dãy = " + result);
+    }
+    quantity = prompt("Insert quantity: ");
+    displayFibonacci(quantity);
+</script>
+
+
+<script>
+
+</script>
+
+
+</html>
