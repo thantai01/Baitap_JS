@@ -33,7 +33,7 @@
     <div id="top">
         <form>
             <input type="button" value="Bắt đầu" id="start_btn" onclick="begin()">
-            <input type="reset" value="Chơi lại" id="reset_btn">
+            <input type="reset" value="Chơi lại" id="reset_btn" disabled>
         </form>
     </div>
 </body>
@@ -46,7 +46,7 @@
         range = Math.ceil(Math.random()*((a-b)+b));
         alert("Có phải số bạn muốn đoán trong khoảng từ " + a + " đến " + b + " không?!");
         turn = +prompt("Số lần bạn muốn đoán??")
-            for (let i = 1; i <= turn; i++) {
+            for (let i = 0; i <= turn; i++) {
                 c = +prompt(" Nhập số đoán của bạn");
                 if (c === range) {
                     alert("Congrat!!You win!");
