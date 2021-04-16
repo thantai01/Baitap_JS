@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="luyentap01.js"></script>
+    <style>
+        #result1, #input1_2 {
+            width: 20px;
+        }
+        #output2_1, #output2_2 {
+            width: 30px;
+        }
+        #checkbox1 {
+            width: 20px;
+            height: 20px;
+        }
+
+        #checkbox2 {
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+        <h2>Practice.01_L.01:</h2>
+        Index = <input type="text" id="input1"/>
+        <input type="button" value="Create" onclick="array1_create()"/> <input type="reset" value="AC"/>
+        <p> Results =  <span id="output1"></span></p>
+        </form>
+        <h3> Có: <input type="text" id="result1" disabled> phần tử <= <input type="text" id="input1_2"></h3>
+    </div>
+    <hr>
+
+    <div>
+        <h2>Practice.01_L.02:</h2>
+        Index = <input type="text" id="input3"/>
+        <input type="button" value="Create" onclick="array2_create()"/> <input type="reset" value="AC"/>
+        <p> Results =  <span id="output2"></span></p>
+        <h2>Array<sub>max</sub> = <input type="text" id="output2_1" disabled></h2> with Index <span id="result2_1"></span>
+        <h2>Array<sub>min</sub> = <input type="text" id="output2_2" disabled></h2> with Index <span id="result2_2"></span>
+    </div>
+    <hr>
+
+    <div>
+        <h2>Practice01_L3: </h2>
+        Index = <input type="text" id="input4"/>
+        <input type="button" value="Create" onclick="array3_create()"/> <input type="reset" value="AC"/>
+        <p> Results =  <span id="output3"></span></p>
+        Array<sub>max</sub> :<span id="result3"> </span><br>
+        Avg = <span id="result3_1"></span>
+    </div>
+    <hr>
+
+    <div>
+        <h2>Practice01_L4: </h2>
+        Index = <input type="text" id="input5"/>
+        <input type="button" value="Create" onclick="array4_create()"/> <input type="reset" value="AC"/>
+        <p> Results =  [<span id="output4"></span>]</p>
+        <input type="button" value="Reverse" onclick="reverse4()">
+        [<span id="output4_1"></span>]
+    </div>
+    <hr>
+
+
+    <div>
+        <h2>Practice01_L5</h2>
+        <input type="text" id="input6" ><input type="button" value="Add to Array" onclick="add_arr5()">
+        <p> Arr = [<span id="result5"></span>]</p>
+        <p> Số các phần tử là số nguyên âm : <span id="result5_1"></span></p>
+    </div>
+    <hr>
+
+
+
+    <div>
+        <h2>Practice01_L6</h2>
+        Element input <input type="text" id="input7"> <input type="button" value="Add to Array">
+        <p> Array = [<span id="result6"></span>]</p> <br>
+        Input your element want to find out <input type="text" id="input8" onchange=""/> <br>
+        <input type="checkbox" id="checkbox1" disabled> In the array at Index: <span id="result6_1"></span> <br>
+        <input type="checkbox" id="checkbox2" disabled> Not in the array.
+
+
+
+    </div>
+</body>
+</html>
