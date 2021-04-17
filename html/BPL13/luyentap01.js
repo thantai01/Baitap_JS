@@ -128,4 +128,34 @@ function reverse4() {
     }
 
 
+    let arr6 = [];
+    let x6 = 0;
+    function add_arr6() {
+
+        arr6[x6] = document.getElementById("input7").value;
+        console.log("Elenment " + arr6[x6] + " added to Index " + x6);
+        x6++;
+        document.getElementById("input7").innerHTML="";
+
+        let show = "";
+        for(let i=0; i< arr6.length;i++) {
+            show =show + arr6[i] + ",";
+        }
+        document.getElementById("result6").innerHTML = show;
+    }
+
+    function find_index() {
+        let y6 = document.getElementById("input8").value;
+
+        for(let i = 0; i< arr6.length;i++) {
+            if(arr6[i]===y6) {
+                document.getElementById("box1").style.backgroundColor = "green"
+                document.getElementById("result6_1").innerHTML = i;
+            } else {
+                document.getElementById("box2").style.backgroundColor = "yellow"
+            }
+        }
+    }
+
+
 

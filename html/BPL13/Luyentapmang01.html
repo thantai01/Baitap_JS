@@ -78,11 +78,13 @@
 
     <div>
         <h2>Practice01_L6</h2>
-        Element input <input type="text" id="input7"> <input type="button" value="Add to Array">
+        <form>
+        Element input <input type="text" id="input7"> <input type="button" value="Add to Array" onclick="add_arr6(x6)">
         <p> Array = [<span id="result6"></span>]</p> <br>
-        Input your element want to find out <input type="text" id="input8" onchange=""/> <br>
-        <input type="checkbox" id="checkbox1" disabled> In the array at Index: <span id="result6_1"></span> <br>
-        <input type="checkbox" id="checkbox2" disabled> Not in the array.
+        Input your element want to find out <input type="text" id="input8"/> <input type="button" value="Check" onclick="find_index()"/> <input type="reset" value="AC"><br>
+        <input type="text" id="box1" value="In the array at Index" disabled> : <span id="result6_1"></span> <br>
+        <input type="text" id="box2" value="Not in the array" disabled>
+        </form>
 
 
 
