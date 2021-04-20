@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle Obj</title>
+</head>
+<body>
+<div>
+<table>
+    <tr>
+        <td rowspan="2">
+            <button onclick="start()">Rectangle Math</button>
+        </td>
+    </tr>
+    <tr>
+        <td>a.length</td>
+        <td><input type="text" id="result1" disabled/></td>
+        <td>b.length</td>
+        <td><input type="text" id="result2" disabled/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>rectangle square</td>
+        <td><input type="text" id="result3" disabled/></td>
+        <td>rectangle p</td>
+        <td><input type="text" id="result4" disabled/></td>
+    </tr>
+
+</table>
+</div>
+<hr>
+<div>
+<canvas id="myCanvas" width="900x" height="900px" style="border:2px solid #d3d3d3;"></canvas>
+</div>
+</body>
+<script>
+
+    // Obj Rectangle meanning
+    function Rectangle(x,y,square,p,) {
+        this.width = x;
+        this.height = y;
+        this.square = square;
+        this.pi = p;
+    }
+
+    // Rectangle creation
+    function rectCreate(x,y,a,b) {
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    // let color = randomColor();
+    ctx.beginPath();
+    ctx.rect(x, y, a, b);
+    ctx.lineWidth = "1";
+    ctx.strokeStyle = "black";
+    // ctx.fillStyle = color;
+    ctx.stroke();
+    }
+
+    function rectSquare(a,b) {
+        return a*b;
+    }
+
+    function rectPi(a,b) {
+        return ((a+b)*2);
+    }
+
+    function start() {
+        let a = +prompt("Insert your a.length");
+        let b = +prompt("Insert your b.length");
+        document.getElementById("result1").value = a;
+        document.getElementById("result2").value = b;
+        document.getElementById("result3").value = rectSquare(a,b);
+        document.getElementById("result4").value = rectPi(a,b);
+        rectCreate(100,100,a,b);
+    }
+
+</script>
+</html>

@@ -1,12 +1,12 @@
 
 function array1_create () {
-    let x1 = 0;
+    let x1 =0 ;
     let array1 = [];
     let l1 = document.getElementById("input1").value;
 
 
     for(let i=0; i< l1;i++) {
-        array1[x1]= Math.ceil(Math.random()*(10-1)+1)* x1;
+        array1[i]= Math.ceil(Math.random()*(10-1)+1)* x1;
         console.log("Element " + array1[i] + "Added at Index" + x1)
         x1++;
     }

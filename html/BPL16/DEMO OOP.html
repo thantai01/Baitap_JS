@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img{
+        width: 50px;
+    }
+</style>
+<body>
+<button onclick="addFruit()">Thêm hoa quả</button>
+<table id="fruit" border="1px"></table>
+<script>
+    //>ES6
+    class Fruit {
+        constructor(_id, _name, _price) {
+            this.id = _id;
+            this.name = _name;
+            this.price = _price;
+            this.image = 'imgs/logo.jpeg'
+        }
+    }
+
+    let fruits = [];
+
+    function addFruit() {
+        let id = prompt('Nhập id');
+        let name = prompt('Nhập tên');
+        let price = prompt('Nhập giá');
+        let image = prompt('Nhập ảnh');
+        let fruit = new Fruit(id,name,price);
+        fruit.image = image;
+
+        fruits.push(fruit);
+        display();
+    }
+
+    function display() {
+        let str = '';
+        for (let i = 0; i < fruits.length; i++) {
+            str += '<tr>';
+            str += "<td>" + fruits[i].id + "</td>";
+            str += "<td><img src="+ fruits[i].image +"></td>";
+            str += "<td>" + fruits[i].name + "</td>";
+            str += "<td>" + fruits[i].price + "</td>";
+            str += "</tr>";
+
+            // str += `<tr>
+            //             <td>${fruits[i].id}</td>
+            //             <td><img src="${fruits[i].image}"></td>
+            //             <td>${fruits[i].name}</td>
+            //             <td>${fruits[i].price}</td>
+            //         </tr>`;
+        }
+        document.getElementById('fruit').innerHTML = str;
+    }
+
+    display();
+
+
+</script>
+</body>
+</html>

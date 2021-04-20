@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" style="width: 100px; height: 50px" value="Click me" onclick="alertMessage()">
+    <hr>
+    Type something bro <input type="text" id="input1" style="width: 50px" onchange="onchange1()">
+    <hr>
+    Try more <input type="text" id="input2" style="width: 30px"> +
+    <input type="text" id="input3" style="width: 30px">
+    <input type="button" value="Let try" id="click1" onclick="compare()"> Total: <span id="result1"></span>
+    <hr>
+    <input type="button" value="Click more" onclick="p15Lab4()">
+    <hr>
+
+
+</body>
+<script>
+    // function arr_create(z) {
+    //     let y= [];
+    //     let x = 0;
+    //     for (let i = 0; i < z; i++) {
+    //         y[i] = Math.ceil(Math.random() * (10 - 1) + 1) * x;
+    //         console.log("Element " + y[i] + " added to Index " + i);
+    //         x = x + 1;
+    //     }
+    //     return y;
+    // }
+
+    function alertMessage() {
+        return alert("Xin chao");
+    }
+
+    function onchange1() {
+        let x = document.getElementById("input1").value;
+        return alert(x);
+    }
+
+    function compare() {
+        a = + document.getElementById("input2").value;
+        b = + document.getElementById("input3").value;
+        if(a>b) {
+            return alert("Warning")
+        } else {
+            return alert("Total = " + (a + b));
+        }
+    }
+
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    function p15Lab4() {
+    let result = 0;
+    alert(result);
+    result = addNumbers();
+    alert(result);
+    }
+
+    function p15Lab5() {
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let cons = ["Ursa Minor", "Tataurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    }
+
+
+</script>
+</html>
