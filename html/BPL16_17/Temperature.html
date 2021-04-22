@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" onchange="celTofahren(this.value);celTokel(this.value)">
+    </p>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" onchange="fahrTocels(this.value);fahrTokel(this.value)">
+    </p>
+    <p>
+        <label>Kelvin</label>
+        <input id="inputKelvin" type="number" placeholder="Kelvin" onchange="kelTocels(this.value);kelTofahra(this.value)">
+    </p>
+
+</div>
+
+</body>
+
+<script>
+
+    function celTofahren(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputFahrenheit").value = (valNum*1.8) + 32;
+    }
+    function celTokel(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputKelvin").value = (valNum)+ 273.15;
+    }
+
+
+    function fahrTocels(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputCelsius").value = (valNum - 32)/1.8;
+    }
+    function fahrTokel(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputKelvin").value = ((valNum)/1.8)+273.15;
+    }
+
+
+    function kelTocels(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputCelsius").value = valNum - 273.15;
+    }
+    function kelTofahra(valNum) {
+        valNum = +(valNum);
+        document.getElementById("inputFahrenheit").value = ((valNum)-273.15*1.8)+32;
+    }
+</script>
+</html>

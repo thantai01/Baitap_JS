@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    let Date = function(date,month,year) {
+        this.date = date;
+        this.month = month;
+        this.year = year;
+
+    }
+
+    this.getDate = function () {
+        return this.date;
+    }
+    this.getMonth = function () {
+        return this.month;
+    }
+    this.getYear = function () {
+        return this.year;
+    }
+
+
+     this.setDate = function (date) {
+            this.date= date;
+    }
+    this.setMonth = function (month) {
+        this.month= month;
+    }
+    this.setYear= function (year) {
+        this.year= year;
+    }
+
+
+    let bodDate = new Date("01","09","1993");
+    console.log(bodDate);
+    bodDate.setDate('04');
+    console.log(bodDate);
+
+
+</script>
+</html>

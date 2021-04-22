@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+
+    <style>
+        #list {
+            border-collapse: collapse;
+            border-color: whitesmoke;
+            width: 50%;
+        }
+        #list tr {
+            width: 20%;
+        }
+        #list tr:nth-child(odd) {
+            background-color: #d6d6d6;
+        }
+        #list tr td {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div>
+        <button onclick="addCustomer()">Add Customers</button>
+    </div>
+    <hr>
+    <div style="width: 1300px; float: left">
+        <table id="list" border="1px" style="border-color: whitesmoke"></table>
+    </div>
+    <div style=" width: 500px; float: left">
+        <span id="edit"></span>
+    </div>
+    <br>
 </body>
+<script src="Task5.js"></script>
 </html>
