@@ -5,37 +5,47 @@
     <title>Task1</title>
 </head>
 <body>
-    <h2>Input your length of array</h2> <input type="text" id="input"><br><br>
-    <button id="create" onclick="createClick()">Create the array</button>
-    <p> [ <span id="result"></span> ] </p>
+    <h2>Input your length of array</h2>
+    <input type="text" id="input">
+    <br><br>
+    <button id="create" onclick= "sumOdd()" >Create the array</button>
+    <p> [<span id="result"></span>] </p>
     <p>Total of odd Element in array = <input type="number" id="result2" disabled> </p>
 </body>
+
 <script>
-    function createClick() {
-    let z = document.getElementById("input").value;
-    arrayCreate(z);
-    }
-    function arrayCreate(z) {
-        let array = [];
-        let x = 0;
+
+    // let z = document.getElementById('input').value;
+
+    function setArr(z) {
+        let array =[];
         for (let i = 0; i < z; i++) {
-            array[i] = Math.ceil(Math.random() * (10 - 1) + 1) * x;
-            console.log(array[i] + " added to the array at Index " + i);
-            x++;
+            array[i] = Math.ceil(Math.random()*99);
+            console.log(array[i] + " added to Index " + i );
         }
         console.log(array);
-        document.getElementById("result").innerHTML = array;
+       return array;
+    }
 
+    function createArr() {
+        let z = document.getElementById('input').value;
+        document.getElementById('result').innerHTML = setArr(z);
+    }
 
-        let total = 0;
-        for (let i = 0; i < z; i++) {
-            if(array[i]%2 !== 0) {
-                total = total + array[i];
+    function sumOdd() {
+        let z = document.getElementById('input').value;
+        let sum = 0;
+        arrayx = setArr(z);
+        document.getElementById('result').innerHTML = arrayx;
+        for (let i = 0; i < arrayx.length; i++) {
+            if (arrayx[i] % 2 !== 0) {
+                    sum = sum + arrayx[i];
             }
         }
-        console.log(total);
-        document.getElementById("result2").value = total;
+        document.getElementById('result2').value = sum;
     }
+
+
 
 </script>
 </html>

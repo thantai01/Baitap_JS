@@ -67,10 +67,10 @@ function deleteItems(inDex) {
     listShow(customers);
 }
 
-function showEditbox(inDex) {
+function showEditbox() {
         let box = '';
         box += '<tr>';
-        box += '<td><input type="text" id="id"/>' + customers[inDex].id + '</td> ID<br>';
+        box += '<td><input type="text" id="id"/>' + customers[i].id + '</td> ID<br>';
         box += '<td><input type="text" id="name"/></td> Name<br>';
         box += '<td><input type="text" id="dob"/></td> Birthday<br>';
         box += '<td><input type="text" id="gender"/></td> Gender<br>';
