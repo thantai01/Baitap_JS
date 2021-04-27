@@ -3,49 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+
 </head>
-<body onload="carChoice()">
-<div>
-    <button onclick="carChoice()">Car</button>
-</div>
+<body onload=''>
+
+<input type="button" value="Change Car" onclick="carChoice()" onload="carChoice()" />
+<button onload="" onclick="">Start</button>
+<label> Score <input type="text" id="score" disabled></label>
 
 <div>
-  <canvas id="myCanvas" width="900" height="950" style="border: 2px solid #d3d3d3"></canvas>
+  <canvas id="myCanvas" width="900" height="900" style="border: 2px solid #d3d3d3"></canvas>
 </div>
 
-<script src="background.js"></script>
 <script src="car.js"></script>
+<script src="background.js"></script>
+<script src="object.js"></script>
+<script src="mainfaction.js"></script>
 
 <script>
-  // let ctx = document.getElementById('myCanvas').getContext('2d');
-  // let bgr = new Background(0,-1500,900,3000);
-  // bgr.drawImg(ctx);
-  //
-  let sel = 0;
-  console.log(playerCar);
-  // main1.drawCar(ctx);
-
-  function carChoice() {
-      switch (sel%4) {
-         case 0:
-             console.log(1);
-             main1.drawCar(ctx);
-             break;
-         case 1:
-             console.log(1);
-             main2.drawCar(ctx);
-             break;
-         case 2:
-             console.log(1);
-             main3.drawCar(ctx);
-             break;
-         case 3:
-             console.log(1);
-             main4.drawCar(ctx);
-             break;
-     }
-      sel++;
-  }
 
 
 </script>

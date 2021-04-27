@@ -8,7 +8,10 @@ class Background {
     }
     drawImg(ctx) {
         let background = new Image();
-        background.src = 'road1.png';
+        background.src = './img/road1.png';
         ctx.drawImage(background,this.x,this.y,this.width,this.height);
     }
 }
+
+let bgr = new Background(0,-1500,900,3000);
+bgr.drawImg(ctx);

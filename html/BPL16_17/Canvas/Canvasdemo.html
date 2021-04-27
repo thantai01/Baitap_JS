@@ -13,42 +13,41 @@
     }
 
 </style>
-<body>
+<body id="" onload="">
+<div id="main">
+    <canvas id="myCanvas" width="800px" height="500px" style="border: 1px solid #d3d3d3;"></canvas>
 
-<canvas width="900px" height="500px" id="myCanvas"></canvas>
-
-</body>
+</div>
 <script>
-    let rectangles = [];
-    let ctx = document.getElementById('myCanvas').getContext('2d');
-    let speed = 1/2;
-    function createRect(x, y, a, b) {
-        let rectangle = new Rectangle(x, y, a, b);
-        rectangle.draw(ctx);
-        rectangles.push(rectangle);
-        rectangle.drawImg(ctx);
-    }
+    window.onload = drawImage()
+        let canvas = document.getElementById('myCanvas');
+        let ctx = canvas.getContext("2d");
+        let img = new Image();
+        img.src = 'road.png';
+        ctx.drawImg(img,0,0,800,500);
 
 
-    let x = 10;
-    let y = 10;
-
-    createRect(x,y,50,50);
-
-
+    // let car = [];
     //
-    function diChuyen() {
-        ctx.clearRect(0, 0, 900, 500,);
-        createRect(x,y,50,50)
-
-        x = x+ speed;
-        if (x >=800 || x < 0) {
-            speed = -speed;
-        }
-    }
-    setInterval(diChuyen, 1)
-
+    // let car1 = new Car("BMW M5","sedan",5,"road.png",0,0);
+    // let car2 = new Car ("Merc","sedan",5,"merc.jpg",0,0);
+    // car1.drawImg(ctx);
+    // car.push(car1);
+    // car2.drawImg(ctx)
+    // car.push(car2);
+    //
+    //
+    // function mercMove() {
+    //     ctx.clearRect(0,0,800,400);
+    //     car2.drawImg(ctx);
+    //     car2.x = car2.x + car2.speed;
+    //
+    // }
+    // setInterval(mercMove,60)
 
 </script>
+
+</body>
+
 
 </html>
