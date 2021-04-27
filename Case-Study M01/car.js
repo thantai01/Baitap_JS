@@ -1,4 +1,5 @@
-let ctx = document.getElementById('myCanvas').getContext('2d');
+let c = document.getElementById('myCanvas');
+let ctx = c.getContext('2d');
 
 class Car {
     constructor( x, y, a, b, image) {
@@ -7,7 +8,7 @@ class Car {
         this.width = a;
         this.height = b;
         this.image = image;
-        this.speed = 50;
+        this.speed = 40;
     }
 
     drawCar(ctx) {
@@ -30,16 +31,14 @@ class Car {
 
 
 let playerCar = [];
-let main1 = new Car (120,700,100,200,'./img/main1.png')
+let main1 = new Car (320,700,100,200,'./img/main1.png')
 // let main2 = new Car (120,700,100,200,'./img/main2.png')
 // let main3 = new Car (120,700,100,200,'./img/main3.png')
 // let main4 = new Car (120,700,100,200,'./img/main4.png')
 // playerCar.push(main1,main2,main3,main4);
 
 
-console.log(playerCar);
 let sel = 0;
-
 function carChoice() {
     switch (sel%4) {
         case 0:
