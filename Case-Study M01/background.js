@@ -14,4 +14,11 @@ class Background {
 }
 
 let bgr = new Background(0,-1500,900,3000);
-bgr.drawImg(ctx);
+
+function bgrMove() {
+    bgr.drawImg(ctx);
+    bgr.y+=11;
+    if(bgr.y >0)
+        bgr.y = -1500;
+}
+

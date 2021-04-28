@@ -30,8 +30,8 @@ class Car {
 
 
 
-let playerCar = [];
-let main1 = new Car (320,700,100,200,'./img/main1.png')
+// let playerCar = [];
+let main1 = new Car (220,700,100,200,'./img/main1.png')
 // let main2 = new Car (120,700,100,200,'./img/main2.png')
 // let main3 = new Car (120,700,100,200,'./img/main3.png')
 // let main4 = new Car (120,700,100,200,'./img/main4.png')
