@@ -1,5 +1,3 @@
-let c = document.getElementById('myCanvas');
-let ctx = c.getContext('2d');
 
 class Car {
     constructor( x, y, a, b, image) {
@@ -8,37 +6,33 @@ class Car {
         this.width = a;
         this.height = b;
         this.image = image;
-        this.speed = 40;
+        this.dx = 0;
+        this.speed = 180;
     }
 
     drawCar(ctx) {
-        ctx.beginPath();
         let car = new Image();
         car.src = this.image;
         ctx.drawImage(car, this.x, this.y, this.width, this.height);
-        ctx.closePath();
     }
 
     moveLeft() {
-        this.x = this.x - this.speed;
+        if (this.x < 140) {
+            this.speed = +this.speed;
+        } else {this.x -=this.speed}
     }
-
     moveRight() {
-        this.x = this.x + this.speed;
+        if(this.x > 520) {
+            this.speed = +this.speed;
+        } else {this.x += this.speed}
     }
 }
 
 
-
-// let playerCar = [];
-let main1 = new Car (220,700,100,200,'./img/main1.png')
-// let main2 = new Car (120,700,100,200,'./img/main2.png')
-// let main3 = new Car (120,700,100,200,'./img/main3.png')
-// let main4 = new Car (120,700,100,200,'./img/main4.png')
-// playerCar.push(main1,main2,main3,main4);
-
-
+let main1 = new Car (120,600,100,200,'./img/main1.png')
 let sel = 0;
+
+
 function carChoice() {
     switch (sel%4) {
         case 0:

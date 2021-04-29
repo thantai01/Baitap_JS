@@ -1,3 +1,7 @@
+let c = document.getElementById('myCanvas');
+let ctx = c.getContext('2d');
+let CANVAS_WIDTH = c.width = 900;
+let CANVAS_HEIGHT = c.height = 900;
 
 class Background {
     constructor(x,y,width,height) {
@@ -17,8 +21,7 @@ let bgr = new Background(0,-1500,900,3000);
 
 function bgrMove() {
     bgr.drawImg(ctx);
-    bgr.y+=11;
+    bgr.y+=15;
     if(bgr.y >0)
-        bgr.y = -1500;
+        bgr.y = -1900;
 }
-

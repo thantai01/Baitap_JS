@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="gameRunning();bgrMove()">
 
 <input type="button" value="Change Car" onclick="carChoice()"/>
 <!--<button onclick="gameRunning()">Start</button>-->
@@ -14,12 +14,10 @@
 <div>
   <canvas id="myCanvas" width="900" height="900" style="border: 2px solid #d3d3d3"></canvas>
 </div>
-
-
-<script src="car.js"></script>
 <script src="background.js"></script>
+<script src="car.js"></script>
 <script src="object.js"></script>
-<script src="doc.js"></script>
+<script src="main.js"></script>
 
 
 
