@@ -32,14 +32,14 @@ let botCar1 = [];
 // let botCar2 = [];
 
 
-setInterval(addObj1, 1500);
+setInterval(addObj1, 2000);
 // setInterval(addObj2,1500);
 
 
 function addObj1() {
     let positionX = [120, 300, 480, 700];
     let randomX = Math.floor(Math.random() * positionX.length);
-    let randomY = Math.floor((Math.random() * (-100 - 700)));
+    let randomY = Math.floor((Math.random() * (-300 - 700)));
     let a = Math.floor(Math.random() * (3 - 1) + 1);
     let obj1 = new Object('./img/obj' + a + '.png', 0, 0, 74, 143,
         positionX[randomX], randomY, 100, 200);

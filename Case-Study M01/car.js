@@ -6,7 +6,6 @@ class Car {
         this.width = a;
         this.height = b;
         this.image = image;
-        this.dx = 0;
         this.speed = 180;
     }
 
